@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Signika', 'sans-serif';
+  transition-duration: 0.6s;
+  background-color: #fffafa;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+#timer {
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.clock {
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.controls {
+  display: flex;
+}
+
+#time-left,
+#timer-label {
+  font-size: 3rem;
+}
+
+#full-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#svg-container {
+  height: 15rem;
+}
+
+#settings {
+  display: flex;
+}
+
+.single-setting {
+  flex-direction: column;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid;
+  border-radius: 8px;
+}
+
+.controls-box {
+  width: 25%;
+  justify-content: space-around;
+}
+
+.btn {
+  background: #ffff;
+  border: none;
+  transition-duration: 0.6s;
+}
+
+.settings-btn {
+  padding: 0 0.5rem;
+}
+
+.controls-btn {
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+.single-setting div {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 20em) {
+  .controls-btn {
+    font-size: 2rem;
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 23.5em) {
+  #svg-container {
+    height: 12rem;
+  }
+
+  #settings {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .single-setting {
+    margin: 0.5rem 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #time-left,
+  #timer-label {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .controls-box {
+    width: 75%;
+  }
+
+  .single-setting div {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 38em) and (max-width: 86em) {
+  .controls-box {
+    width: 50%;
+  }
+
+  .controls-btn {
+    font-size: 4rem;
+  }
+
+  #svg-container {
+    height: 20rem;
+  }
+
+  .single-setting div {
+    font-size: 2rem;
+  }
+
+  .settings-btn {
+    font-size: 1.5rem;
   }
 }
