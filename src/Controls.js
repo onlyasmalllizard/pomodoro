@@ -12,6 +12,7 @@ const Controls = (props) => {
       <button
         id='start_stop'
         className='btn controls-btn'
+        value='Start/Stop'
         style={{ color: textColor, background: backgroundColor }}
         onClick={() => props.toggleTimer()}
       >
@@ -19,6 +20,7 @@ const Controls = (props) => {
       </button>
       <button
         className='btn controls-btn'
+        value='Reset'
         style={{ color: textColor, background: backgroundColor }}
         onClick={() => props.reset()}
       >

@@ -39,6 +39,7 @@ const SingleSetting = (props) => {
           className='btn settings-btn'
           style={{ color: textColor, background: backgroundColor }}
           onClick={() => props.decrementTime(props.type)}
+          value={`Decrease ${props.type} length`}
         >
           <FontAwesomeIcon icon={faAngleDoubleDown} />
         </button>
@@ -51,6 +52,7 @@ const SingleSetting = (props) => {
           className='btn settings-btn'
           style={{ color: textColor, background: backgroundColor }}
           onClick={() => props.incrementTime(props.type)}
+          value={`Increase ${props.type} length`}
         >
           <FontAwesomeIcon icon={faAngleDoubleUp} />
         </button>

@@ -25,9 +25,9 @@ const Clock = ({ isSession, timeRemaining, colors }) => {
 
   return (
     <div id='full-clock'>
-      <div id='timer-label' style={{ color: color }}>
+      <h1 id='timer-label' style={{ color: color }}>
         {isSession ? 'Session' : 'Break'}
-      </div>
+      </h1>
       <div id='time-left' style={{ color: color }}>
         {minutes.length === 2 ? minutes : `0${minutes}`}:
         {seconds.length === 2 ? seconds : `0${seconds}`}

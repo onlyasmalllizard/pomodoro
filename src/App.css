@@ -90,6 +90,10 @@ body {
   font-size: 1.5rem;
 }
 
+h1 {
+  font-weight: 400;
+}
+
 @media only screen and (max-width: 20em) {
   .controls-btn {
     font-size: 2rem;
